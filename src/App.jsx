@@ -63,7 +63,10 @@ export default function App() {
   const [elapsed, setElapsed] = useState(0);
   const [jobInput, setJobInput] = useState('');
   const [notesInput, setNotesInput] = useState('');
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'dark' ? 'dark' : 'light';
+  });
   const intervalRef = useRef(null);
 
   // Apply theme to <html> and persist preference

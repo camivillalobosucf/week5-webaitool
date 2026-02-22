@@ -125,7 +125,7 @@ body {
   padding: 0.3rem 0.75rem;
   border: 1px solid var(--border-base);
   border-radius: 6px;
-  background: var(--surface-card);
+  background: var(--bg-surface);
   color: var(--text-base);
   font-size: 0.8rem;
   cursor: pointer;
