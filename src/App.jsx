@@ -63,6 +63,7 @@ export default function App() {
   const [elapsed, setElapsed] = useState(0);
   const [jobInput, setJobInput] = useState('');
   const [notesInput, setNotesInput] = useState('');
+  const [theme, setTheme] = useState('light');
   const intervalRef = useRef(null);
 
   // Persist entries
@@ -166,7 +167,7 @@ export default function App() {
   // ---------------------------------------------------------------------------
 
   return (
-    <div className="app">
+    <div className="app" data-theme={theme}>
       <header className="app-header">
         <div className="header-inner">
           <h1 className="app-title">Time Tracker</h1>
