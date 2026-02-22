@@ -36,6 +36,44 @@
   --red-bg:           #fef2f2;
 }
 
+/* ─── Dark theme overrides ──────────────────────────────────── */
+[data-theme="dark"] {
+  /* Page */
+  --bg-page:           #0f0f11;
+  --bg-surface:        #1c1c1f;
+  --bg-surface-subtle: #18181b;
+
+  /* Text — scale inverts: strong → near-white, faint → near-black */
+  --text-strong:    #fafafa;
+  --text-base:      #e4e4e7;
+  --text-secondary: #d4d4d8;
+  --text-muted:     #a1a1aa;
+  --text-dim:       #71717a;
+  --text-subtle:    #52525b;
+  --text-faint:     #3f3f46;
+
+  /* Borders */
+  --border-base:  #27272a;
+  --border-input: #3f3f46;
+  --border-row:   #18181b;
+
+  /* Blue accent — shift lighter so it reads on dark surfaces */
+  --blue:         #60a5fa;
+  --blue-hover:   #3b82f6;
+  --blue-dark:    #93c5fd;
+  --blue-darker:  #bfdbfe;
+  --blue-border:  #1e3a8a;
+  --blue-bg:      #1e3a8a;
+  --blue-bg-start:#0f172a;
+  --blue-bg-end:  #0c1a2e;
+
+  /* Red / danger — lighten red, darken backgrounds */
+  --red:              #f87171;
+  --red-hover:        #ef4444;
+  --red-border-light: #7f1d1d;
+  --red-bg:           #200d0d;
+}
+
 /* ─── Reset / Base ─────────────────────────────────────────── */
 *,
 *::before,
