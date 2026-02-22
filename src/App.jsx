@@ -178,6 +178,13 @@ export default function App() {
               day: 'numeric',
             })}
           </span>
+          <button
+            className="btn-theme-toggle"
+            onClick={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+          </button>
         </div>
       </header>
 

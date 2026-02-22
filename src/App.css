@@ -115,9 +115,23 @@ body {
 
 .header-inner {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.btn-theme-toggle {
+  margin-left: auto;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border-base);
+  border-radius: 6px;
+  background: var(--surface-card);
+  color: var(--text-base);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.btn-theme-toggle:hover {
+  background: var(--border-base);
 }
 
 .app-title {
