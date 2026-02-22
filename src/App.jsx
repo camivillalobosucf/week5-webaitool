@@ -63,12 +63,13 @@ export default function App() {
   const [elapsed, setElapsed] = useState(0);
   const [jobInput, setJobInput] = useState('');
   const [notesInput, setNotesInput] = useState('');
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
   const intervalRef = useRef(null);
 
-  // Apply theme to <html> so body background and all CSS vars cascade correctly
+  // Apply theme to <html> and persist preference
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   // Persist entries
