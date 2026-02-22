@@ -66,6 +66,11 @@ export default function App() {
   const [theme, setTheme] = useState('light');
   const intervalRef = useRef(null);
 
+  // Apply theme to <html> so body background and all CSS vars cascade correctly
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   // Persist entries
   useEffect(() => {
     localStorage.setItem(STORAGE.ENTRIES, JSON.stringify(entries));
@@ -167,7 +172,7 @@ export default function App() {
   // ---------------------------------------------------------------------------
 
   return (
-    <div className="app" data-theme={theme}>
+    <div className="app">
       <header className="app-header">
         <div className="header-inner">
           <h1 className="app-title">Time Tracker</h1>
